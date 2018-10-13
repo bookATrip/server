@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   res.send('batata')
 })
-app.get('/favicon.ico:1',(req,res)=>{
+app.get('/favicon.ico',(req,res)=>{
   res.send('alo')
 })
 const PORT = process.env.PORT || 3000
