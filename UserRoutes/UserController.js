@@ -1,5 +1,5 @@
 const db = require('../Database/index').connection
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const SALT_ROUNDS = 10;
 exports.register = (req, res) => {
     const sql = 'INSERT INTO users SET ?';
