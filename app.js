@@ -11,8 +11,12 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(userRoutes)
 app.use(tripRoutes)
+
 app.get('/', (req, res) => {
   res.send('batata')
+})
+app.get('/favicon.ico', (req, res) => {
+  res.send('favico')
 })
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
