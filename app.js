@@ -16,8 +16,10 @@ app.use((req, res, next) => {
   next(createError(404));
 });
 
-
-
-app.listen(3000, () => {
-  console.log('App running on port 3000');
+app.get('/', (req, res) => {
+  res.send('batata')
+})
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}`);
 })
