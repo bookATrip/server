@@ -11,14 +11,16 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(userRoutes)
 app.use(tripRoutes)
+app.get('/', (req, res) => {
+  res.send('batata')
+})
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
 });
 
-app.get('/', (req, res) => {
-  res.send('batata')
-})
+
+
 
 
 const PORT = process.env.PORT || 3000
